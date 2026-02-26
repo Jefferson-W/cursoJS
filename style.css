@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Betania+Patmos+In&family=Eater&display=swap');
+
+body{
+    background-color: rgb(247, 243, 177);
+    font-family:'Betania Patmos In' ;
+    font-size: 40px;
+}
+
+#titulo{
+    text-align: center;
+}
+
+.destaque{
+    background-color: yellow;
+    color: red;
+}

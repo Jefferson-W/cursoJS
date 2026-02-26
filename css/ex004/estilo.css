@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Betania+Patmos+In&family=Eater&display=swap');
+
+
+body{
+    background-color: lightgrey;
+    font-family:'Arial', sans-serif ;
+}
+
+h1{
+    background-color: lightgreen;
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+    text-indent: 30px;
+}

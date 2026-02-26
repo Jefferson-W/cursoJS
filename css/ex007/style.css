@@ -1,0 +1,23 @@
+div{
+    background-color: rgb(255, 11, 198);
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 30px;
+    border: 1px solid black;
+    margin:10px;
+}
+
+#quadradoVermelho:hover{
+    background-color: red;
+    font-size: 100px;
+    color: white;
+}
+
+#quadradoVerde:hover{
+    background-color: green;
+}
+
+#quadradoAmarelo:hover{
+    background-color: yellow;
+}
