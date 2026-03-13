@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+    <style>
+        label {
+            display: block;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="titulo">Trabalhando com formularios</h1>
+
+    <form id="formulario">
+
+        <label>Nome:
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+        </label>
+
+        <label>CPF:
+            <input type="number" name="cpf" id="cpf" required>
+        </label>
+
+        <label> Idade:
+            <input type="number" name="idade" id="idade" min="0" max="10" required>
+        </label>
+
+        <label>Email:
+            <input type="email" name="email" id="email">
+
+        </label>
+
+        <label> Senha:
+            <input type="password">
+        </label>
+
+        <label>Genero:
+            <input type="radio" name="genero" value="Masculino">Masculino
+            <input type="radio" name="genero" value="Feminino">Feminino
+        </label>
+
+        <label> Atividades:
+            <input type="checkbox" name="atv" id="1">Bike
+            <input type="checkbox" name="atv" id="1">Nadar
+            <input type="checkbox" name="atv" id="1">Skate
+        </label>
+
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        let form = document.getElementById('formulario')
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault()
+            alert('Formulario enviado!!')
+            form.reset()
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        div#botao {
+            background-color: lightsalmon;
+            width: 60px;
+            display: inline-block;
+            border-radius: 5px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        div#limpar {
+            background-color: rgb(180, 184, 255);
+            width: 60px;
+            display: inline-block;
+            border-radius: 5px;
+            padding: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Tabuada</h1>
+    <p>Digite um numero e clique em calcular, para ver o resultado!</p>
+
+    <input type="number" id="numero">
+
+    <div id="botao"> Calcular</div>
+
+    <div id="limpar"> Limpar</div>
+
+    <p id="res"></p>
+
+    <script>
+        let resultado = document.getElementById('res')
+        let botao = document.getElementById('botao')
+        let limpar = document.getElementById('limpar')
+
+        limpar.addEventListener('click', () => {
+            resultado.innerHTML = "Esperando calculo"
+        })
+
+        botao.addEventListener('click', () => {
+            let numeroDigitado = document.getElementById('numero').value
+           
+            resultado.innerHTML = ""
+           
+            for (let count = 1; count <= 10; count++) {
+                let calculo = numeroDigitado * count
+                resultado.innerHTML += `${numeroDigitado} X ${count} = ${calculo} <br>`
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>

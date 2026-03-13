@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex012</title>
+</head>
+
+<body>
+
+    <h1>Testando getElements</h1>
+
+    <p id="paragrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, harum. Autem, laudantium
+        blanditiis! Numquam, maiores eos, fuga provident cum voluptatibus eaque at debitis eius inventore atque officia,
+        a similique officiis?</p>
+
+    <script>
+        let corUsuario = window.prompt('Digite uma cor em ingles!')
+
+        window.document.getElementById('paragrafo').style.backgroundColor = corUsuario
+        // window.document.getElementById('paragrafo').style.color = 'white'
+        window.document.getElementById('paragrafo').innerHTML =
+         `
+        <ol>
+            <li>A cor escolhida foi <strong>${corUsuario}</strong>
+            <li>A cor escolhida foi <strong>${corUsuario}</strong>
+            <li>A cor escolhida foi <strong>${corUsuario}</strong>
+            <li>A cor escolhida foi <strong>${corUsuario}</strong>
+            <li>A cor escolhida foi <strong>${corUsuario}</strong>
+        </ol>
+         `
+
+    </script>
+</body>
+
+</html>

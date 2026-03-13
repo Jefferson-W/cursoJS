@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Impar</title>
+</head>
+
+<body>
+    <h1>Exercicio par ou impar</h1>
+
+    <p id="res">
+
+    </p>
+
+    <script>
+
+        let numeroDigitado = window.prompt('Digite um numero!')
+
+        let paragrafoResultado = document.getElementById('res')
+        console.log(paragrafoResultado)
+
+        if (numeroDigitado % 2 == 0) {
+            console.log('PAR')
+            paragrafoResultado.innerHTML = `O numero ${numeroDigitado} é <strong>PAR</strong>`
+        } else {
+            console.log('ÍMPAR')
+            paragrafoResultado.innerHTML = `O numero ${numeroDigitado} é ÍMPAR`
+        }
+    </script>
+</body>
+
+</html>
