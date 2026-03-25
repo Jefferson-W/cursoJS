@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Páginas de exercícios</title>
+    <style>
+        :root {
+            --bg: #0f1419;
+            --surface: #1a2332;
+            --border: #2d3a4f;
+            --text: #e8edf4;
+            --muted: #8b9cb3;
+            --accent-html: #e34f26;
+            --accent-css: #1572b6;
+            --accent-js: #f7df1e;
+            --link: #7eb8ff;
+            --link-hover: #b8d4ff;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: var(--text);
+            background:
+                radial-gradient(ellipse 120% 80% at 50% -20%, #1e3a5f 0%, transparent 55%),
+                var(--bg);
+        }
+
+        .wrap {
+            max-width: 72rem;
+            margin: 0 auto;
+            padding: 2rem 1.25rem 3rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        h1 + p {
+            margin: 0.5rem 0 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 900px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+                align-items: start;
+            }
+        }
+
+        section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.25rem 1.35rem 1.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+        }
+
+        section h2 {
+            margin: 0 0 1rem;
+            padding-bottom: 0.65rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--border);
+        }
+
+        section.html h2 {
+            color: var(--accent-html);
+            border-bottom-color: color-mix(in srgb, var(--accent-html) 35%, var(--border));
+        }
+
+        section.css h2 {
+            color: var(--accent-css);
+            border-bottom-color: color-mix(in srgb, var(--accent-css) 35%, var(--border));
+        }
+
+        section.js h2 {
+            color: var(--accent-js);
+            border-bottom-color: color-mix(in srgb, var(--accent-js) 35%, var(--border));
+        }
+
+        ol {
+            margin: 0;
+            padding-left: 1.35rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        li::marker {
+            color: var(--muted);
+        }
+
+        a {
+            color: var(--link);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: color 0.15s ease, border-color 0.15s ease;
+        }
+
+        a:hover {
+            color: var(--link-hover);
+            border-bottom-color: var(--link-hover);
+        }
+
+        a:focus-visible {
+            outline: 2px solid var(--link);
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1>Páginas de exercícios</h1>
+            <p>Índice do curso — HTML, CSS e JavaScript</p>
+        </header>
+
+        <div class="grid">
+            <section class="html" aria-labelledby="sec-html">
+                <h2 id="sec-html">HTML</h2>
+                <ol>
+                    <li><a href="html/index.html">Página 1</a></li>
+                    <li><a href="html/titulos.html">Titulos</a></li>
+                    <li><a href="html/formatacao.html">Formatação</a></li>
+                    <li><a href="html/links.html">Links</a></li>
+                    <li><a href="html/listas.html">Listas</a></li>
+                    <li><a href="html/imagens.html">Imagens</a></li>
+                </ol>
+            </section>
+
+            <section class="css" aria-labelledby="sec-css">
+                <h2 id="sec-css">CSS</h2>
+                <ol>
+                    <li><a href="css/ex001/index.html">CSS inline</a></li>
+                    <li><a href="css/ex002/index.html">CSS interno</a></li>
+                    <li><a href="css/ex003/index.html">CSS externo</a></li>
+                    <li><a href="css/ex004/index.html">CSS combinadores</a></li>
+                    <li><a href="css/ex005/index.html">CSS id e class</a></li>
+                    <li><a href="css/ex006/index.html">CSS pseudo-classes</a></li>
+                    <li><a href="css/ex007/index.html">CSS pseudo-elementos</a></li>
+                    <li><a href="css/ex008/index.html">CSS fontes</a></li>
+                    <li><a href="css/ex009/index.html">CSS cores</a></li>
+                    <li><a href="css/ex010/index.html">CSS alinhamentos</a></li>
+                    <li><a href="css/ex011/index.html">CSS flexbox</a></li>
+                </ol>
+            </section>
+
+            <section class="js" aria-labelledby="sec-js">
+                <h2 id="sec-js">JavaScript</h2>
+                <ol>
+                    <li><a href="js/ex010.html">Ex10 JS</a></li>
+                    <li><a href="js/ex011.html">Ex11 JS</a></li>
+                    <li><a href="js/ex012.html">Ex12 JS</a></li>
+                    <li><a href="js/ex013.html">Ex13 JS</a></li>
+                    <li><a href="js/ex014.html">Ex14 JS</a></li>
+                    <li><a href="js/ex015.html">Ex15 JS</a></li>
+                    <li><a href="js/exParImpar.html">Ex Par Impar JS</a></li>
+                    <li><a href="js/exTabuada.html">Ex Tabuada JS</a></li>
+                    <li><a href="js/exTabuada2.html">Ex Tabuada2 JS</a></li>
+                    <li><a href="js/exContagem.js">Ex Contagem JS</a></li>
+                </ol>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
