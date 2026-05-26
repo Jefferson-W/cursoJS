@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex016</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgba(172, 172, 172, 0.342);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input {
+            margin-bottom: 10px;
+            width: 100%;
+            /* box-sizing: border-box; */
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+            color: #555;
+            /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.342); */
+        }
+
+        #botao {
+            display: block;
+            background-color: rgb(86, 86, 236);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid black;
+            width: 350px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.342);
+        }
+
+        .radio {
+            width: 10%;
+        }
+
+        .checkbox {
+            width: 10%;
+        }
+
+        #botao:hover {
+            background-color: rgb(0, 0, 250);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="formulario">
+        <h1>Formulario</h1>
+        <label>Nome: </label>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+
+        <label>Email: </label>
+        <input type="email" name="email" id="email" placeholder="Digite seu email">
+
+        <label>Idade: </label>
+        <input type="number" name="idade" id="idade" placeholder="Digite sua idade">
+
+        <label>Senha: </label>
+        <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+
+        <label>Confirmar senha: </label>
+        <input type="password" name="confirmarSenha" id="confirmarSenha" placeholder="Confirme sua senha">
+
+        <label>Genero: </label>
+        <input class="radio" type="radio" name="genero" value="Masculino">Masculino
+        <input class="radio" type="radio" name="genero" value="Feminino">Feminino
+
+        <label>Atividades: </label>
+        <input class="checkbox" type="checkbox" name="atividades" value="Bike">Bike
+        <input class="checkbox" type="checkbox" name="atividades" value="Nadar">Nadar
+        <input class="checkbox" type="checkbox" name="atividades" value="Skate">Skate
+
+        <input id="botao" type="submit" value="Enviar">
+    </form>
+    <script>
+
+        let form = document.getElementById('formulario')
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault()           
+            alert('Formulario enviado!!')
+            form.reset()
+        })
+
+    </script>
+</body>
+
+</html>
