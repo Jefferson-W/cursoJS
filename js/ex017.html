@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Via Cep</title>
+</head>
+<body>
+    <h1>Via Cep</h1>
+    <input type="text" id="cep" placeholder="Digite o CEP" maxlength="8">
+    <button id="botao">Buscar</button>
+    <p id="rua"></p>
+    <p id="bairro"></p>
+    <p id="cidade"></p>
+    <p id="estado"></p>
+
+    <script>
+        const botao = document.getElementById('botao')
+        const rua = document.getElementById('rua')
+        const bairro = document.getElementById('bairro')
+        const cidade = document.getElementById('cidade')
+        const estado = document.getElementById('estado')
+
+        botao.addEventListener('click', buscarCep)
+
+        async function buscarCep(){
+            const cep = document.getElementById('cep').value
+            if (cep == ''){
+                alert('Digite um CEP válido')    
+                return            
+            }
+
+            const url = `https://viacep.com.br/ws/${cep}/json/`
+
+            let response = await fetch(url)
+
+            let data = await response.json()
+
+            console.log("RETORNO AQUI", data)
+
+            if(data.erro){
+                alert('CEP não encontrado')
+                return
+            }
+
+            rua.innerHTML = `Rua: ${data.logradouro}`
+            bairro.innerHTML = `Bairro: ${data.bairro}`
+            cidade.innerHTML = `Cidade: ${data.localidade}`
+            estado.innerHTML = `Estado: ${data.uf}`
+        }
+
+    </script>
+</body>
+</html>
