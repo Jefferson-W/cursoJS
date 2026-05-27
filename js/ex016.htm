@@ -6,72 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex016</title>
     <style>
-
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body {
+
+        body{
+            background-color: rgb(201, 201, 201);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: rgba(172, 172, 172, 0.342);
         }
 
-        h1 {
-            margin-bottom: 20px;
+        h1{
             text-align: center;
+            margin-bottom: 20px;
+            color: #333;
         }
 
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #555;
-        }
-
-        input {
-            margin-bottom: 10px;
-            width: 100%;
-            /* box-sizing: border-box; */
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid black;
-            color: #555;
-            /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.342); */
-        }
-
-        #botao {
-            display: block;
-            background-color: rgb(86, 86, 236);
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-        }
-
-        form {
+        form{
             background-color: white;
             padding: 20px;
             border-radius: 10px;
-            border: 1px solid black;
-            width: 350px;
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.342);
+            width: 300px;
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.5)
         }
 
-        .radio {
+        label{
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input{
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .radio, .checkbox{
             width: 10%;
         }
 
-        .checkbox {
-            width: 10%;
-        }
-
-        #botao:hover {
-            background-color: rgb(0, 0, 250);
+        input#botao{
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            background-color: blue;
             color: white;
+            cursor: pointer;
+        }
+
+        input#botao:hover{
+            background-color: rgb(0, 0, 131);
         }
     </style>
 </head>
